@@ -1,0 +1,125 @@
+.wrapper{
+    padding: 60px;
+    padding-left: 10px;
+    max-width: 1200px;
+    margin: auto;
+    letter-spacing: 1px;   
+}
+section {
+    background-color: #454a4e12;
+}
+h5 {
+    font-weight: bold;
+}
+.tick{
+    display: block;
+    position: relative;
+    padding-left: 23px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin: 0;
+}
+.tick input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.check{
+    position: absolute;
+    top: 1px;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+.tick:hover input ~ .check {
+    background-color: #f3f3f3;
+}
+.tick input:checked ~ .check {
+    background-color: #212529;
+}
+.check:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.tick input:checked ~ .check:after {
+    display: block;
+    transform: rotate(45deg) scale(1);
+} 
+.tick .check:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg) scale(2);
+}
+
+#sidebar{
+    width: 40%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.category{
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.list-group-item{
+    border: none;
+    padding: 0.3rem 0.4rem 0.3rem 0rem;
+}
+.badge-primary{
+    background-color: #defadb;
+    color: #212529;
+}
+.brand .check{
+    background-color: #fff;
+    top: 3px;
+    border: 1px solid #666;
+}
+.brand .tick{
+    font-size: 1rem;
+    padding-left: 25px;
+}
+
+.brand .tick:hover input ~ .check{
+    background-color: #f9f9f9;
+}
+.brand .tick input:checked ~ .check{
+    background-color: #212529;
+}
+
+@media(min-width:768px) and (max-width:991px){
+    .checkbox {
+        padding: 6px 10px;
+        width: 49%;
+        float: left;
+        margin: 5px 5px 5px 0px;
+    }
+    #sidebar{
+        width: 65%;
+    }
+    
+}
+@media(min-width:576px) and (max-width:767px){
+    #sidebar{
+        width: 80%;
+    }
+    
+}
+@media(max-width:575px){
+    
+    #sidebar{
+        width: 90%;
+    }
+
+    
+}

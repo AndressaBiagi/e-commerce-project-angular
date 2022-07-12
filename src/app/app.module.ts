@@ -8,6 +8,11 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { NavComponent } from './components/shared/nav/nav.component';
 import { FiltersComponent } from './components/filters/filters.component';
 import { StoreAppComponent } from './components/store-app/store-app.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ProductListComponent } from './components/store-app/product-list/product-list.component';
+import { ProductItemComponent } from './components/store-app/product-list/product-item/product-item.component';
+import { BookService } from './components/store-app/product-list/product-list.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,13 +21,18 @@ import { StoreAppComponent } from './components/store-app/store-app.component';
     HeaderComponent,
     NavComponent,
     FiltersComponent,
-    StoreAppComponent
+    StoreAppComponent,
+    ProductListComponent,
+    ProductItemComponent
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [BookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

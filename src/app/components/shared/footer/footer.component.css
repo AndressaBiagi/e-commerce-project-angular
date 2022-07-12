@@ -1,0 +1,60 @@
+footer {
+    background-color: #212121;
+    color: white;
+    letter-spacing: 2px;
+}
+
+h5 {
+    font-weight: bolder;  
+    font-size: 1.3rem; 
+    letter-spacing: 0;
+}
+.list-unstyled a {
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+.social_media_icons {
+    display: flex;
+    flex-direction: column;    
+}
+.social_media_icons a fa-icon {
+    margin-right: 10px;
+    font-size: 1.4rem;
+    color: white;
+}
+.social_media_icons a {
+    text-decoration: none;
+}
+.social_media_icons a fa-icon:hover {
+    color: rgba(255, 255, 255, 0.607);
+}
+.social_media_icons p{
+    display: none;
+}
+#subscribe_btn {
+    background-color: white;
+    font-weight: bold;
+}
+#subscribe_btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+#copy {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+#copy a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+}
+@media (min-width: 990px) {
+    .social_media_icons p {
+        font-size: 0.8rem;
+        color: white;
+        display: inline;
+        letter-spacing: 1.8px;    
+    }
+    .social_media_icons p:hover {
+        color: rgba(255, 255, 255, 0.607);
+    }
+}
